@@ -36,7 +36,8 @@ summarizeBtn.addEventListener("click", async () => {
   const extractedText = await extractTextFromFile(fileInput.files[0]);
   const mode = modeSelect.value;
 
-  const response = await fetch("http://localhost:5000/summarize", {
+  // const response = await fetch("http://localhost:5000/summarize", {
+  const response = await fetch("/summarize", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({ text: extractedText, mode })
