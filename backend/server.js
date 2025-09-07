@@ -11,7 +11,7 @@ app.use(express.json({ limit: '50mb' }));
 const API_KEY = "fw_3Zknaij71rMSs71bpVjEc4uT"; // <-- your actual API key
 
 const API_URL = "https://api.fireworks.ai/inference/v1/chat/completions";
-const MODEL = "accounts/sentientfoundation-serverless/models/dobby-mini-unhinged-plus-llama-3-1-8b";
+const MODEL = "accounts/sentientfoundation/models/dobby-unhinged-llama-3-3-70b-new";
 
 // Validate API key format
 if (!API_KEY?.startsWith('key_') && !API_KEY?.startsWith('fw_')) {
