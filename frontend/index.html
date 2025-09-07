@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dobby File Summarizer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="card">
+        <h1>
+            Dobby File Summarizer 
+            <img src="../logor.svg" alt="Dobby icon" class="dobby-icon">
+        </h1>
+        
+        <div class="input-container">
+            <input type="file" id="fileInput" />
+            <select id="modeSelect">
+                <option value="paragraph">One Paragraph</option>
+                <option value="bullet">Bullet Points</option>
+            </select>
+            <button id="summarizeBtn">Summarize</button>
+        </div>
+
+        <div id="output"></div>
+    </div>
+
+    <!-- Update PDF.js scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+    <script>
+        // Set worker path for PDF.js
+        pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js';
+    </script>
+    <script src="app.js"></script>
+</body>
+</html>
